@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Collection of authentic Islamic duas for daily life, morning, evening, and special occasions on NoorTools.">
+    <meta name="theme-color" content="#1a472a">
+    
+    <meta property="og:title" content="Duas - NoorTools">
+    <meta property="og:description" content="Islamic duas for morning, evening, eating, traveling, protection, and more.">
+    <meta property="og:type" content="website">
+    
+    <title>Duas - NoorTools</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%231a472a'>☪</text></svg>">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">☪</span>
+                <span class="logo-text">NoorTools</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quran.html">Quran</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="duas.html" class="active">Duas</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>🤲 Duas</h1>
+                <p>Collection of Islamic duas for daily life</p>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <div class="tabs" id="duasTabs">
+                    <button class="tab-btn active" data-category="morning">Morning & Evening</button>
+                    <button class="tab-btn" data-category="sleep">Before Sleeping</button>
+                    <button class="tab-btn" data-category="travel">Travelling</button>
+                    <button class="tab-btn" data-category="eating">Eating</button>
+                    <button class="tab-btn" data-category="protection">Protection</button>
+                    <button class="tab-btn" data-category="general">General</button>
+                </div>
+            </div>
+
+            <div class="duas-grid" id="duasContainer">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <div class="info-note" style="margin-top: 40px;">
+                <strong>⚠️ Important Note:</strong> The duas displayed here are placeholders. We do not fabricate or generate Islamic duas. Authentic duas will be added from verified Islamic sources only. Always verify duas with qualified Islamic scholars before use.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NoorTools</h3>
+                    <p>Islamic tools and resources for Muslims worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="quran.html">Quran</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="duas.html">Duas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NoorTools. All rights reserved. | Not affiliated with any organization.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/duas.js"></script>
+</body>
+</html>
