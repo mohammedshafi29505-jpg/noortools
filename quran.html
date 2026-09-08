@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read and explore the Quran with translations and tafsir on NoorTools.">
+    <meta name="theme-color" content="#1a472a">
+    
+    <meta property="og:title" content="Quran - NoorTools">
+    <meta property="og:description" content="Read the Quran with translations and tafsir.">
+    <meta property="og:type" content="website">
+    
+    <title>Quran - NoorTools</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%231a472a'>☪</text></svg>">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">☪</span>
+                <span class="logo-text">NoorTools</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quran.html" class="active">Quran</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="duas.html">Duas</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>📖 Quran</h1>
+                <p>Read and explore the Quran with translations</p>
+            </div>
+
+            <div class="quran-container">
+                <div class="quran-sidebar">
+                    <input type="text" id="surahSearch" placeholder="Search Surah..." style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #e5e7eb; border-radius: 4px;">
+                    <h3>Surahs</h3>
+                    <ul class="surah-list" id="surahList">
+                    </ul>
+                </div>
+
+                <div class="quran-viewer">
+                    <div class="placeholder-content">
+                        <h3>Quran Interface Ready</h3>
+                        <p>Authentic Quran data will be connected here.</p>
+                        <p style="margin-top: 15px; font-size: 0.85rem;">⚠️ Please note: We do not fabricate or generate Quran verses. When connected, this interface will display verified Islamic texts with proper translations and Tafsir from authentic sources only.</p>
+                    </div>
+                    <div id="surahContent" style="display: none;">
+                        <div class="surah-header">
+                            <h2 id="surahTitle">Surah Name</h2>
+                            <div class="surah-info" id="surahInfo"></div>
+                        </div>
+                        <div id="ayahsContainer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 20px; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px;">
+                <h4 style="color: #78350f; margin-bottom: 10px;">ℹ️ About This Quran Section</h4>
+                <p style="color: #78350f; font-size: 0.9rem;">This interface is designed to display the Quran with:
+                    <ul style="margin-top: 10px; margin-left: 20px; color: #78350f; font-size: 0.9rem;">
+                        <li>Arabic text from verified sources</li>
+                        <li>Multiple English translations</li>
+                        <li>Tafsir (explanation) from scholarly sources</li>
+                        <li>Audio recitations</li>
+                        <li>Bookmark functionality</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NoorTools</h3>
+                    <p>Islamic tools and resources for Muslims worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="quran.html">Quran</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="duas.html">Duas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NoorTools. All rights reserved. | Not affiliated with any organization.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/quran.js"></script>
+</body>
+</html>
