@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Islamic calculators and tools: Zakat calculator, date converter, age calculator, and more.">
+    <meta name="theme-color" content="#1a472a">
+    
+    <meta property="og:title" content="Islamic Tools - NoorTools">
+    <meta property="og:description" content="Zakat calculator, Islamic date converter, age calculator, and more tools.">
+    <meta property="og:type" content="website">
+    
+    <title>Islamic Tools - NoorTools</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%231a472a'>☪</text></svg>">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">☪</span>
+                <span class="logo-text">NoorTools</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quran.html">Quran</a></li>
+                <li><a href="tools.html" class="active">Tools</a></li>
+                <li><a href="duas.html">Duas</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>🔧 Islamic Tools</h1>
+                <p>Helpful calculators and utilities for daily life</p>
+            </div>
+
+            <div class="tools-grid">
+                <!-- Zakat Calculator -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-icon">💰</span>
+                        <h3>Zakat Calculator</h3>
+                    </div>
+                    <p class="tool-description">Calculate your Zakat (almsgiving) obligation</p>
+                    
+                    <div class="form-group">
+                        <label for="zakatWealth">Total Wealth (USD)</label>
+                        <input type="number" id="zakatWealth" placeholder="Enter amount" min="0" step="0.01">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="zakatGold">Gold Held (grams)</label>
+                        <input type="number" id="zakatGold" placeholder="Enter grams" min="0" step="0.1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="zakatSilver">Silver Held (grams)</label>
+                        <input type="number" id="zakatSilver" placeholder="Enter grams" min="0" step="0.1">
+                    </div>
+                    
+                    <button onclick="calculateZakat()">Calculate Zakat</button>
+                    
+                    <div id="zakatResult"></div>
+                    
+                    <div class="info-note">
+                        <strong>Note:</strong> Zakat is a religious obligation. For accurate calculations and to understand your specific situation, consult with a qualified Islamic scholar.
+                    </div>
+                </div>
+
+                <!-- Age Calculator -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-icon">🎂</span>
+                        <h3>Age Calculator</h3>
+                    </div>
+                    <p class="tool-description">Calculate your exact age in years, months, and days</p>
+                    
+                    <div class="form-group">
+                        <label for="birthDate">Birth Date</label>
+                        <input type="date" id="birthDate">
+                    </div>
+                    
+                    <button onclick="calculateAge()">Calculate Age</button>
+                    
+                    <div id="ageResult"></div>
+                </div>
+
+                <!-- Percentage Calculator -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-icon">📊</span>
+                        <h3>Percentage Calculator</h3>
+                    </div>
+                    <p class="tool-description">Quick percentage calculations for any number</p>
+                    
+                    <div class="form-group">
+                        <label for="percentNum">Number</label>
+                        <input type="number" id="percentNum" placeholder="Enter number" step="0.01">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="percentVal">Percentage (%)</label>
+                        <input type="number" id="percentVal" placeholder="Enter percentage" step="0.01">
+                    </div>
+                    
+                    <button onclick="calculatePercent()">Calculate</button>
+                    
+                    <div id="percentResult"></div>
+                </div>
+
+                <!-- Islamic Date Converter -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-icon">📅</span>
+                        <h3>Islamic Date Converter</h3>
+                    </div>
+                    <p class="tool-description">Convert between Gregorian and Islamic Hijri calendar</p>
+                    
+                    <div class="form-group">
+                        <label>Gregorian to Hijri</label>
+                        <input type="date" id="gregorianDate">
+                        <button onclick="convertToHijri()" style="margin-top: 10px;">Convert to Hijri</button>
+                    </div>
+                    
+                    <div id="hijriResult" style="margin-top: 15px;"></div>
+                    
+                    <div class="placeholder-content" style="margin-top: 15px;">
+                        <p>Hijri date calculation interface ready</p>
+                        <p style="font-size: 0.85rem;">Accurate conversion requires verified Islamic calendar data</p>
+                    </div>
+                </div>
+
+                <!-- Ramadan Countdown -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-icon">🌙</span>
+                        <h3>Ramadan Countdown</h3>
+                    </div>
+                    <p class="tool-description">Days until the next Ramadan</p>
+                    
+                    <div id="ramadanCountdown" style="text-align: center; padding: 20px;">
+                        <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 10px;">Note: Please verify dates with local Islamic organizations</p>
+                        <div class="placeholder-content">
+                            <p>Ramadan countdown interface ready</p>
+                            <p style="font-size: 0.85rem;">Uses verified Islamic calendar data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NoorTools</h3>
+                    <p>Islamic tools and resources for Muslims worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="quran.html">Quran</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="duas.html">Duas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NoorTools. All rights reserved. | Not affiliated with any organization.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/tools.js"></script>
+</body>
+</html>
