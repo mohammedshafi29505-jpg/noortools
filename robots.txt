@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+Allow: *.html
+Allow: /css/
+Allow: /js/
+Allow: /manifest.json
+
+Disallow: /.git/
+Disallow: /node_modules/
+
+Crawl-delay: 1
+Request-rate: 1/1s
+
+Sitemap: /sitemap.xml
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing-specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
