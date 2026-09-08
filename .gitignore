@@ -1,0 +1,28 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node dependencies (if using npm)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build and dist
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
+
+# OS files
+Thumbs.db
+.DS_Store
